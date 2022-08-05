@@ -1,0 +1,76 @@
+<div class="form-froup row">
+
+  <div>
+    <label class="col-sm-10 col-form-label">ID tài khoản</label>
+    <div class="col-sm-10">
+      <select class="form-control" [(ngModel)]="IDTaiKhoan" placeholder="Chọn ID tài khoản (khách hàng)">
+      <option>---ID tài khoản---</option>
+           <option *ngFor="let IDTK of ListIDTK">
+               {{IDTK.IDTaiKhoan}}
+           </option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-10 col-form-label">ID khách hàng</label>
+    <div class="col-sm-10">
+      <select class="form-control" [(ngModel)]="IDKhachHang" placeholder="Chọn ID khách hàng">
+      <option>---ID khách hàng---</option>
+           <option *ngFor="let IDKH of ListIDKH">
+               {{IDKH.IDKhachHang}}
+           </option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-2 col-form-label">Điểm đón</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="DiemDon" placeholder="Nhập điểm đón">
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-10 col-form-label">Thời gian đón</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="ThoiGianDon" placeholder="Nhập thời gian đón">
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-10 col-form-label">Điểm kết thúc</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="DiemKetThuc" placeholder="Nhập điểm kết thúc">
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-10 col-form-label">Thời gian kết thúc</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="ThoiGianKetThuc" placeholder="Nhập thời gian kết thúc">
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-10 col-form-label">Giá tiền</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="GiaTien" placeholder="Nhập giá tiền">
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-2 col-form-label">Trạng thái</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="TrangThai" placeholder="Nhập trạng thái">
+    </div>
+  </div>
+</div>
+
+<button (click)="createDatChuyen()" *ngIf="dc.IDChuyen == 0" class="btn btn-primary mt-3">
+  Đặt chuyến
+</button>
+
+<button (click)="updateDatChuyen()" *ngIf="dc.IDChuyen != 0" class="btn btn-primary mt-3">
+  Chỉnh sửa thông tin đặt chuyến
+</button>

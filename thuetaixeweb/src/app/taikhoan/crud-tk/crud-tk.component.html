@@ -1,0 +1,30 @@
+<div class="form-froup row">
+
+  <div>
+    <label class="col-sm-5 col-form-label">Tên tài khoản</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="TenTaiKhoan" placeholder="Nhập tên tài khoản">
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-10 col-form-label">Mật khẩu</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="MatKhau" placeholder="Nhập mật khẩu">
+    </div>
+  </div>
+
+  <div>
+    <label class="col-sm-10 col-form-label">Trạng thái</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="TrangThai" placeholder="Nhập trạng thái">
+    </div>
+  </div>
+
+<button (click)="createTaiKhoan()" *ngIf="tk.IDTaiKhoan == 0" class="btn btn-primary mt-3">
+  Thêm nhân viên
+</button>
+
+<button (click)="updateTaiKhoan()" *ngIf="tk.IDTaiKhoan != 0" class="btn btn-primary mt-3">
+  Chỉnh sửa nhân viên
+</button>

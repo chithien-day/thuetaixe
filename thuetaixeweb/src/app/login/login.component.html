@@ -1,0 +1,26 @@
+<section class="vh-100" style="background-color: rgb(51, 50, 50)">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <h2>Đăng nhập</h2>
+
+            <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+              <div class="mb-3">
+                <input formControlName = "email" placeholder="Tên đăng nhập" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+
+              <div class="mb-3">
+                <input formControlName = "password" placeholder="Mật khẩu" type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
